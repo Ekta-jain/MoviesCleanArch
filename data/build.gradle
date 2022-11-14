@@ -13,7 +13,8 @@ android {
         minSdkVersion globalConfiguration["minSdkVersion"]
         targetSdkVersion globalConfiguration["targetSdkVersion"]
 
-        buildConfigField "String", "THE_MOVIE_DB_API_KEY", "\"" + getApiKey() + "\""
+        buildConfigField "String", "THE_MOVIE_DB_API_KEY", "\"19e5757d552b7585ce31e4fc2710052d\""
+
 
         // Enabling multidex support
         multiDexEnabled true
@@ -43,7 +44,7 @@ dependencies {
     implementation dataDependencies.okHttpLogging
     implementation dataDependencies.roomRuntime
 
-    kapt dataDependencies.roomCompiler
+    annotationProcessor dataDependencies.roomCompiler
 }
 
 static def getApiKey() {
